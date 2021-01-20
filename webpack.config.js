@@ -9,6 +9,14 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
+    devServer: {
+        port: 4200
+    },
     plugins: [
         new HTMLWebpackPlugin({
             template: './index.html'
@@ -20,6 +28,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot)$/,
+                use: ['file-loader']
             }
         ]
     }

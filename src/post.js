@@ -3,11 +3,4 @@ export default class Post {
         this.title = title;
         this.date = new Date()
     }
-
-    toString() {
-        JSON.stringify({
-            title: this.title,
-            date: this.date.toJSON
-        })
-    }
 }

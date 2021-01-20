@@ -1,7 +1,12 @@
 import Post from './post.js';
+import * as $ from 'jquery';
 import './styles/style.css'
 
-let post = new Post('Webpack');
+const post = new Post('Webpack');
 
 console.log(JSON.stringify(post));
-console.log('Hi!');
+$('pre')
+.html(JSON.stringify(post) + '1')
+.addClass('vendor');
+
+console.log('Hi');
