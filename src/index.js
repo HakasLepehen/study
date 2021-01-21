@@ -2,6 +2,7 @@ import Post from './post.js';
 import * as $ from 'jquery';
 import './styles/style.css'
 import './styles/less.less'
+import './styles/sass.scss'
 
 const post = new Post('Webpack');
 
